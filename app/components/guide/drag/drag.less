@@ -1,0 +1,54 @@
+@import '../../../constants/styleConsts';
+@import './../hit/hit.less';
+
+.guide-drag{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  .wire-frame{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px dashed rgba(255,175,52,1);
+    border-radius: 3px;
+    .z-index;
+  }
+  
+  //phone style
+  @media (max-width: @phone-max-width){
+
+  }
+
+  //pad style
+  @media (min-width: @pad-min-width) {
+
+  }
+}
+.touchable {
+  pointer-events: all;
+}
+.untouchable {
+  pointer-events: none;
+}
+.guide-prompt {
+  .hint {
+    position: absolute;
+    .gesture{
+      width: 43px;
+      height: 64px;
+    }
+    .text-wrap{
+      height: 60px;
+      position: relative;
+      .text{
+        line-height: 60px;
+        white-space: nowrap;
+      }
+    }
+  }
+  &.hidden {
+    display: none;
+  }
+}

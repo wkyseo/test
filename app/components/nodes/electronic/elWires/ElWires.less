@@ -1,0 +1,25 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-preview.node-type-ELWIRES {
+  .node-preview-icon {
+    .node-preview-electronic-body-double-size(@node-elWires);
+  }
+}
+
+.node-actual.node-type-ELWIRES {
+  .node-body{
+    .node-electronic-body-double-size(@node-elWires);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-elWires;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-elWires;
+    }
+  }
+}

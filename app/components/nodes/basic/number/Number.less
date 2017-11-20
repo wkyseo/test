@@ -1,0 +1,41 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-preview.node-type-NUMBER {
+
+}
+
+.node-actual.node-type-NUMBER {
+  .node-body {
+    .node-common-round-body-bg-text(@node-number, @node-number-borderColor);
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-number;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core {
+      .node-output-port-number-style(@node-number);
+    }
+
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-number;
+    }
+  }
+
+}
+
+@media (max-width: @phone-max-width) {
+  .node-actual.node-type-NUMBER{
+    .node-body{
+      .number-node{
+        font-size: 20px;
+      }
+    }
+  }
+}

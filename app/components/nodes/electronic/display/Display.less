@@ -1,0 +1,25 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-preview.node-type-OLED_DISPLAY {
+  .node-preview-icon {
+    .node-preview-electronic-body-double-size(@node-display);
+  }
+}
+
+.node-actual.node-type-OLED_DISPLAY {
+  .node-body{
+    .node-electronic-body-double-size(@node-display);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-display;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-display;
+    }
+  }
+}

@@ -1,0 +1,135 @@
+@import '../nodes/nodeShape';
+@import '../../constants/styleConsts';
+
+.ReactModal__Content.ReactModal__Content--after-open.number-input-dialog {
+  width: 100%;
+  height: 100%;
+  background-color: #f1f3f5;
+  padding: 0;
+  border: none;
+  .center();
+  outline: none;
+  .dialog-container{
+    width: 100%;
+    height: 100%;
+    .done{
+      position: absolute;
+      top: 4%;
+      right: 4.5%;
+      padding: 10px;
+      color: #28a0ff;
+      font-size: 18px;
+    }
+    .number-input-wrap{
+      height: 55%;
+      width: 100%;
+      .flex-lr-tb-center();
+      .number-input-display{
+        display: flex;
+        align-items: center;
+        height: 58px;
+        width: 60%;
+        margin: 30px auto 0 auto;
+        border-radius: 1px;
+        background-color: #ffffff;
+        border: solid 1px #8bccff;
+        font-size: 32px;
+        color: #28a0ff;
+        padding-left: 18px;
+      }
+    }
+    .key-board{
+      float: left;
+      height: 45%;
+      width: 72%;
+      .number-input-keyboard {
+        width: 100%;
+        height: 100%;
+        .number-input-key {
+          box-sizing: border-box;
+          cursor: pointer;
+          background: #FFFFFF;
+          BORDER: 1px solid #B1D8EF;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          height: 25%;
+          width: 33.33%;
+          font-weight: normal;
+          font-size: 48px;
+          color: #47566f;
+          border-bottom: none;
+          border-left: none;
+          i {
+            font-size: 36px;
+          }
+          &:active{
+            background: #DDF1FF;
+          }
+        }
+
+      }
+    }
+    .option{
+      float: right;
+      width: 28%;
+      height: 45%;
+      .number-clear, .number-space{
+        background: #ffffff;
+        color: #47566f;
+        width: 100%;
+        height: 25%;
+        font-size: 32px;
+        border-top: 1px solid #B1D8EF;
+        .flex-lr-tb-center();
+      }
+      .number-space>img{
+          width: 48px;
+      }
+      .number-clear{
+        margin-top: -1px;
+      }
+      .number-confirm{
+        width: 100%;
+        height: 50%;
+        background-color: #28a0ff;
+        color: #ffffff;
+        .flex-lr-tb-center();
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+@media (max-width: @phone-max-width) {
+  .ReactModal__Content.ReactModal__Content--after-open.number-input-dialog{
+    .dialog-container{
+      .number-input-wrap{
+        height: 46%;
+      }
+      .key-board{
+        height: 54%;
+        .number-input-keyboard{
+          .number-input-key{
+            font-size: 24px;
+          }
+        }
+      }
+      .option{
+        height: 54%;
+        .number-clear, .number-space{
+          font-size: 24px;
+        }
+        .number-space>img{
+          width: 28px;
+        }
+        .number-clear{
+          margin-top: 0;
+        }
+        .number-confirm{
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}

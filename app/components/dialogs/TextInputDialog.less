@@ -1,0 +1,110 @@
+@import '../nodes/nodeShape';
+@import '../../constants/styleConsts';
+
+.ReactModal__Content.ReactModal__Content--after-open.text-input-dialog {
+  width: 100vw;
+  height: 100VH;
+  position: absolute;
+  left: 0;
+  top: 0;
+  .dialog-container{
+    width: 100%;
+    height: 100%;
+    background-color: #f1f3f5;
+    
+    .text{
+      position: absolute;
+      width: 83.6vw;
+      left: 3vw;
+      top: 5.3vh;
+      height: 42vh;
+      overflow: hidden;
+      outline: none;
+      box-sizing: border-box;
+      border: none;
+      resize: none;
+      padding: 15px;
+      font-size: 20px;
+      color: #28a0ff;
+      font-weight: 300;
+      letter-spacing: 1.2px;
+    }
+    .done{
+      position: absolute;
+      top: 3.4%;
+      right: 4.4%;
+      padding: 10px;
+      color: #28a0ff;
+      font-size: 24px;
+    }
+    .mask{
+      opacity: 0;
+    }
+    .dialog-title{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 11vh;
+      background: #5598f6;
+      span {
+        .centerXY;
+        color: #fff;
+        font-size: 4vh;
+        text-transform: uppercase;
+        
+      }
+      @media (max-width: @phone-max-width) {
+        height: 14.5vh;
+        span {
+          font-size: 5.2vh;
+        }
+      }
+    }
+    &.titled {
+      .text {
+        top: 13vh;
+        left: 1.5vw;
+        right: 1.5vw;
+        width: 97vw;
+        height: 33.4vh;
+      }
+      .done{
+        color: #fff;
+        position: static;
+        left: auto;
+        right: auto;
+        padding: 0 37px 0 0;
+      }
+      @media (max-width: @phone-max-width) {
+        .text {
+          top: 18vh;
+          left: 3.6vw;
+          right: 3.6vw;
+          width: 93vw;
+          height: 26.8vh
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @phone-max-width) {
+  .ReactModal__Content.ReactModal__Content--after-open.text-input-dialog{
+    .dialog-container{
+      .text{
+        padding: 10px;
+        font-size: 16px;
+        letter-spacing: 1px;
+      }
+      .done{
+        top: 4%;
+        right: 4.5%;
+        font-size: 18px;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+.node-actual.node-type-COUNTER {
+  .node-body{
+    .node-common-square-body-button-panel(@node-counter, @node-counter-borderColor);
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-counter;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core {
+      .node-output-port-number-style(@node-counter);
+    }
+  }
+  .tab-control{
+    right: -42px;
+    .tab-control-circle{
+      background-color: @node-counter;
+    }
+  }
+}

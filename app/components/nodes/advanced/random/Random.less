@@ -1,0 +1,44 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-actual.node-type-RANDOM {
+  .node-body{
+    .node-common-square-body-button-panel(@node-random, @node-random-borderColor);
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-random;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core {
+      .node-output-port-number-style(@node-random);
+    }
+    .show{
+      margin-left: 0;
+    }
+  }
+  .tab-control{
+    right: -42px;
+    .tab-control-circle{
+      background-color: @node-random;
+    }
+  }
+}
+
+@media (max-width: @phone-max-width) {
+  .node-actual.node-type-RANDOM {
+    .node-body {
+      .random-value {
+        height: 13px;
+        font-size: 12px;
+      }
+      .random-trigger {
+        font-size: 12px;
+        height: 17px;
+      }
+    }
+  }
+}

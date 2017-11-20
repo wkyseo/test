@@ -1,0 +1,156 @@
+@import '../../../constants/styleConsts';
+
+.guide-mask{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 50;
+  left: 0px;
+  top: 0px;
+
+  .guide-sprite {
+    width: 205px;
+    height: 228px;
+    position: absolute;
+    background-size: auto 100%;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    @media (max-width: @phone-max-width){
+      width: 134px;
+      height: 149px;
+    }
+  }
+
+  .guide-content {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    .guide-scene {
+      flex-grow: 1;
+      position: relative;
+      background-color: #5291FF;
+      .scene-obj {
+        background-size: 100%;
+        position: absolute;
+      }
+      .scene-center-title {
+        font-size: 98px;
+        color: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        @media (max-width: @phone-max-width){
+          font-size: 64px;
+        }
+      }
+    }
+    .guide-subtitle {
+      font-size: 28px;
+      height: 267px;
+      position: relative;
+      .guide-text {
+        position: absolute;
+        left: 314px;
+        right: 180px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .next-step-hint {
+        position: absolute;
+        right: 19px;
+        bottom: 37px;
+        color: #28A0FF;
+        opacity: 0.5;
+        font-size: 24px;
+        &.show {
+          transition: opacity 0.8s;
+        }
+        &.hidden {
+          opacity: 0;
+        }
+      }
+      @media (max-width: @phone-max-width){
+        font-size: 18px;
+        height: 110px;
+        .guide-text {
+          left: 209px;
+          right: 130px;
+        }
+        .next-step-hint {
+          font-size: 16px;
+          bottom: 12px;
+          right: 17px;
+        }
+      }
+    }
+    .guide-sprite {
+      left: 63px;
+      bottom: 55px;
+      @media (max-width: @phone-max-width){
+        left: 48px;
+        bottom: 10px;
+      }
+    }
+    &.bottom {
+      .guide-subtitle {
+        background-color: #fff;
+        color: #494949;
+      }
+    }
+    &.middle {
+      background-color: rgba(82, 145, 255, 0.6);
+      height: auto;
+      top: 0px;
+      bottom: 137px;
+      .guide-scene {
+        background-color: transparent;
+      }
+      .guide-subtitle {
+        background-image: linear-gradient(180deg, rgba(82,145,255,0) 0%, #5291FF 100%);
+        color: #fff;
+        .next-step-hint {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@keyframes gesture-right-bottom {
+  0% {transform: translate(20px,20px);}
+}
+@keyframes gesture-right-top {
+  0% {transform: translate(20px,-20px);}
+}
+.scene-gesture {
+  height: 64px;
+  width: 64px;
+  background-size: 100%;
+  position: absolute;
+  z-index: 57;
+  &.bottom {
+    animation: gesture-right-bottom 1s infinite;
+  }
+  &.top {
+    animation: gesture-right-top 1s infinite;
+  }
+}
+
+.guide-masked {
+  z-index: 55;
+  &:before {
+    content: " ";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 56;
+  }
+}
+
+//phone style
+@media (max-width: @phone-max-width){
+}

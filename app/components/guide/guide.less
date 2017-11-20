@@ -1,0 +1,59 @@
+@import '../../constants/styleConsts';
+
+@keyframes guide-touch-hand {
+  0%   {transform: scale(1.5);}
+  75%  {transform: scale(1);}
+}
+
+@keyframes guide-touch-hand-hit {
+  0%  {transform: scale(1);}
+  14.2% {transform: scale(0.6) translate(-2px, -5px); }
+  28.4%  {transform: scale(1) translate(0, 0);}
+  100% {transform: scale(1); }
+}
+
+.guide-hand {
+  width: 43px;
+  height: 63px;
+  animation: guide-touch-hand-hit 1.4s infinite;
+  @media (max-width: @phone-max-width){
+    width: 28px;
+    height: 41px;
+  }
+}
+
+.guide-container{
+  .guide-skip {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    width: 99px;
+    height: 49px;
+    border: 3px solid #000000;
+    color: #000;
+    font-size: 24px;
+    line-height: 49px;
+    text-align: center;
+    border-radius: 154px;
+    opacity: 0.15;
+    z-index: 99;
+  }
+
+  //phone style
+  @media (max-width: @phone-max-width){
+    .guide-skip {
+      border-width: 2px;
+      width: 64px;
+      height: 32px;
+      top: 20px;
+      right: 25px;
+      font-size: 16px;
+      line-height: 32px;
+    }
+  }
+
+  //pad style
+  @media (min-width: @pad-min-width) {
+
+  }
+}

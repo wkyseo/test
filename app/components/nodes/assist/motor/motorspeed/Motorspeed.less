@@ -1,0 +1,31 @@
+@import '../../../nodeColor';
+@import '../../../nodeShape';
+@import '../../../../../constants/styleConsts';
+
+.node-actual.node-type-MOTORSPEED {
+  .node-body{
+    .node-common-square-body-label-2-text(@node-motorSpeed,@node-motorSpeed-borderColor);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-motorSpeed;
+    }
+  }
+  .tab-control{
+    right: -35px;
+  }
+  .node-port-inputs {
+    .core {
+      background-color: @node-servoAngle;
+      border: solid 1px @node-servoAngle-borderColor;
+      .node-port-value{
+        text-align: center;
+      }
+    }
+  }
+  .node-port-outputs{
+    .core{
+      .node-output-port-stying-object-style(@node-motorSpeed);
+    }
+  }    
+}

@@ -1,0 +1,33 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+.node-preview.node-type-VALVE {
+
+}
+
+.node-actual.node-type-VALVE {
+  .node-body{
+    .node-common-round-body-icon-only(@node-valve);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-valve;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-valve;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core {
+      .node-output-port-number-style(@node-valve);
+    }
+    .show{
+      margin-left: 0;
+      text-overflow: ellipsis;
+      overflow: hidden;  
+    }
+  }
+}
+

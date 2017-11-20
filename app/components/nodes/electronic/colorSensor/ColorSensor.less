@@ -1,0 +1,27 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-preview.node-type-COLORSENSOR {
+  .node-preview-icon {
+    .node-preview-electronic-body-single-size(@node-colorSensor);
+  }
+}
+
+.node-actual.node-type-COLORSENSOR {
+  .node-body{
+    .node-electronic-body-single-size(@node-colorSensor);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-colorSensor;
+    }
+  }
+
+  .node-port-outputs{
+    margin-left: 10px;
+    .core{
+      background-color: @node-colorSensor;
+    }
+  }  
+}

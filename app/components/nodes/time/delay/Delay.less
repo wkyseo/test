@@ -1,0 +1,38 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-actual.node-type-DELAY {
+  color:#fff;
+  .node-body{
+    .node-common-round-body-label-content(@node-delay, @node-delay-borderColor);
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-delay;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core {
+      .node-output-port-number-style(@node-delay);
+    }
+    .show{
+      margin-left: 0;
+    }
+  }
+  .tab-control{
+    .tab-control-circle{
+      background-color: @node-delay;
+    }
+  }
+}
+
+@media (max-width: @phone-max-width) {
+  .node-actual.node-type-DELAY .node-body .node-actual-body {
+    .delay-number-wrap {
+      font-size: 18px;
+    }
+  }
+}
+

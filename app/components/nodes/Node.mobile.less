@@ -1,0 +1,180 @@
+@import '../../constants/styleConsts';
+@media (max-width: @phone-max-width) {
+  @width: 56px;
+  @height: 56px;
+
+  .node-preview{
+    height: 10.6vh;
+    width: 10.6vh;
+  }
+
+  .node-actual{
+    &.top-most{
+      .node-body:before {
+        border-width: 3px;
+      }
+    }
+    .node-tools {
+      .tab-control {
+        width: 16px;
+        height: 16px;
+        top: -15px;
+        right: -15px;
+        .tab-control-circle {
+          width: 16px;
+          height: 16px;
+          .icon-delete {
+            font-size: 8px;
+          }
+        }
+      }
+    }
+  }
+  .node-actual .node-port-inputs, .node-actual .node-port-outputs {
+    .node-port-output {
+      width: 28px;
+      height: 25px;
+    }
+    .node-port-input {
+      width: 28px;
+      height: 25px;
+    }
+    .core {
+      width: 10px;
+      height: 10px;
+      border-width: 2px;
+      font-size: 8px;
+      &.enlarge-port{
+        border-width: 2px;
+      }
+      &.show {
+        width: 20px;
+        height: 10px;
+        margin-left: 0px;
+        .node-port-value{
+          font-size: 7px;
+        }
+      }
+    }
+  }
+
+  .node-preview-palette {
+    margin: 9px 8px;
+    .node-preview-icon{
+      height: 42px;
+    }
+    .node-preview-name {
+      font-size: 8px;
+      line-height: 11px;
+    }
+  }
+
+  .node-actual[data-category="electronic"] {
+    .node-body{
+      height: 62px;
+      width: 62px;
+      background-color: #f4f4f4;
+    }
+  }
+
+  .editer-main{
+    .sub-node-shelf{
+      width: 60px;
+      .node-preview{
+        width: 40px;
+        height: 40px;
+        margin: 10px 10px 0;
+        .node-preview-name{
+          line-height: 1.2;
+          font-size: 10px;
+        }
+      }
+    }
+    .sub-palette-fake-node{
+      .node-preview-icon{
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+  }
+
+  
+  .tab-mask {
+    border: 3px solid #99a0a3;
+    border-radius: 13px;
+    span {
+      font-size: 12px;
+      height: 32px;
+    }
+  }
+
+  .node-actual.node-type-TEXTTOSPEECH,
+  .node-actual.node-type-OCR,
+  .node-actual.node-type-EMOTION_TEST,
+  .node-actual.node-type-SPEAKERRECOGNIZE {
+    &.plaint-wrap{
+      .plaint{
+        width: 10px;
+      }
+    }
+  }
+
+  //reset because scale
+  .node-actual.node-type-STEERINGWHEEL,
+  .node-actual.node-type-MOTORSPEED,
+  .node-actual.node-type-SERVOANGLE,
+  .node-actual.node-type-PATTERN,
+  .node-actual.node-type-IMAGE{
+    .node-tools{
+      .tab-control{
+        width: 25px;
+        height: 25px;
+        top: -27px;
+        right: -20px;
+        .tab-control-circle{
+          width: 100%;
+          height: 100%;
+          .icon-delete{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .node-port-outputs{
+      .core{
+        font-size: 14px;
+      }
+    }
+  }
+
+
+  .node-actual.node-type-SEQUENCE,
+  .node-actual.node-type-COUNTER,
+  .node-actual.node-type-DELAY,
+  .node-actual.node-type-SCALE,
+  .node-actual.node-type-COMPUTEPLUS,
+  .node-actual.node-type-COMPAREPLUS,
+  .node-actual.node-type-RANDOM{
+    .node-tools{
+      .tab-control{
+        right: -15px;
+      }
+    }
+  }
+}
+
+
+@media (min-width: @pad-min-width) {
+  .node-actual.node-type-STEERINGWHEEL,
+  .node-actual.node-type-MOTORSPEED,
+  .node-actual.node-type-SERVOANGLE,
+  .node-actual.node-type-PATTERN,
+  .node-actual.node-type-IMAGE{
+    .node-port-outputs{
+      .core{
+        font-size: 12px;
+      }
+    }
+  }
+}

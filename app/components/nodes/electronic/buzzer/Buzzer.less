@@ -1,0 +1,25 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-preview.node-type-BUZZER {
+  .node-preview-icon {
+    .node-preview-electronic-body-single-size(@node-buzzer);
+  }
+}
+
+.node-actual.node-type-BUZZER {
+  .node-body{
+    .node-electronic-body-single-size(@node-buzzer);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-buzzer;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-buzzer;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+/*.node-preview.node-type-FUNNYTOUCH {
+  width: 95px !important;
+  height: 57px !important;
+  .node-preview-icon{
+    width: 95px !important;
+    height: 57px !important;
+  }
+}*/
+
+.node-preview.node-type-FUNNYTOUCH {
+  .node-preview-icon {
+    .node-preview-electronic-body-double-size(@node-funnyTouch);
+  }
+}
+
+.node-actual.node-type-FUNNYTOUCH {
+  .node-body{
+    .node-electronic-body-double-size(@node-funnyTouch);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-funnyTouch;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core{
+      background-color: @node-funnyTouch;
+    }
+  }  
+}

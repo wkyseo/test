@@ -1,0 +1,25 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-preview.node-type-MOTORS {
+  .node-preview-icon {
+    .node-preview-electronic-body-double-size(@node-motors);
+  }
+}
+
+.node-actual.node-type-MOTORS {
+  .node-body{
+    .node-electronic-body-double-size(@node-motors);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-motors;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-motors;
+    }
+  }
+}

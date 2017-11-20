@@ -1,0 +1,27 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-actual.node-type-COMPARE {
+  .node-body{
+    .node-common-round-body-icon-value(@node-compare, @node-compare-borderColor);
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-compare;
+    }
+  }
+  .node-port-outputs{
+    .core{
+      background-color: @node-compare;
+    }
+  }
+  .node-config {
+    font-size: 14px;
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-compare;
+    }
+  }
+}

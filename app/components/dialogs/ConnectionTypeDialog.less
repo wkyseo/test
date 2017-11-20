@@ -1,0 +1,125 @@
+@import '../../constants/styleConsts';
+
+.ConnectionTypeDialog.dialog {
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  
+  .dialog-container{
+    position: relative;
+    background-color: #5291ff;
+    .dialog-header {
+      padding-top: 114px;
+      h1{
+        text-align: center;
+        font-size: 37px;
+        font-weight: 500;
+        margin: 0px;
+        height: 52px;
+        line-height: 52px;
+      }
+    }
+    .dialog-body{
+      padding: 0px;
+      .choose-connection{
+        position: absolute;
+        top: 250px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 697px;
+        display: flex;
+        justify-content: space-between;
+        .connection-button {
+          width: 307px;
+          height: 307px;
+          border-radius: 31px;
+          background-color: #fff;
+          padding-top: 76px;
+          &.wifi-button-mask{
+            position: relative;
+            &:after{
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              background-color: #FFFFFF;
+              opacity: 0.5;
+              border-radius: 31px;
+            }
+          }
+          img {
+            height: 127px;
+          }
+          label {
+            display: block;
+            font-size: 30px;
+            line-height: 42px;
+            margin-top: 35px;
+            color: #494949;
+          }
+        }
+      }
+    }
+  }
+  .dialog-tools {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    width: 46px;
+    height: 46px;
+    .dialog-close {
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      background-size: contain;
+    }
+  }
+  @media (max-width: @phone-max-width) {
+    transform: scale(1) !important;
+    -webkit-transform: scale(1) !important;
+    .dialog-container{
+      .dialog-header {
+        padding-top: 37px;
+        h1{
+          font-size: 24px;
+          height: 33px;
+          line-height: 33px;
+        }
+      }
+      .dialog-body{
+        .choose-connection{
+          top: 100px;
+          width: 454px;
+          .connection-button {
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            padding-top: 50px;
+            &.wifi-button-mask{
+              &:after{
+                border-radius: 20px;
+              }
+            }
+            img {
+              height: 82px;
+            }
+            label {
+              font-size: 20px;
+              line-height: 28px;
+              margin-top: 23px;
+            }
+          }
+        }
+      }
+    }
+    .dialog-tools {
+      top: 15px;
+      right: 15px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-preview.node-type-SERVO {
+  .node-preview-icon {
+    .node-preview-electronic-body-double-size(@node-servo);
+  }
+}
+
+.node-actual.node-type-SERVO {
+  .node-body{
+    .node-electronic-body-double-size(@node-servo);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-servo;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-servo;
+    }
+  }
+}
+

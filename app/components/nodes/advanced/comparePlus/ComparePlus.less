@@ -1,0 +1,37 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+.node-preview.node-type-COMPAREPLUS {
+
+}
+
+.node-actual.node-type-COMPAREPLUS {
+  .node-body{
+    .node-common-square-body-2-text-icon(@node-comparePlus);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-comparePlus;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-comparePlus;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core {
+      .node-output-port-number-style(@node-comparePlus);
+    }
+    .show{
+      margin-left: 0;
+      text-overflow: ellipsis;
+      overflow: hidden;  
+    }
+  }
+  .node-config {
+    font-size: 14px;
+  }
+}
+

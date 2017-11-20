@@ -1,0 +1,27 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+.node-preview.node-type-OR {
+
+}
+
+.node-actual.node-type-OR {
+  .node-body{
+    .node-common-round-body-icon-only(@node-or);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-or;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-or;
+    }
+  }
+  .node-port-outputs{
+    .core{
+      background-color: @node-or;
+    }
+  }
+}
+

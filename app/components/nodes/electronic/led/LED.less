@@ -1,0 +1,25 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-preview.node-type-LED {
+  .node-preview-icon {
+    .node-preview-electronic-body-single-size(@node-led);
+  }
+}
+
+.node-actual.node-type-LED {
+  .node-body{
+    .node-electronic-body-single-size(@node-led);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-led;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-led;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-preview.node-type-TEMPERATURE {
+  .node-preview-icon {
+    .node-preview-electronic-body-single-size(@node-temperature);
+  }
+}
+
+.node-actual.node-type-TEMPERATURE {
+  .node-body{
+    .node-electronic-body-single-size(@node-temperature);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-temperature;
+    }
+  }
+
+  .node-port-outputs{
+    margin-left: 10px;
+    .core{
+      .node-output-port-number-style(@node-temperature);
+    }
+  }  
+}

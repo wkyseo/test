@@ -1,0 +1,136 @@
+@import '../../../constants/styleConsts';
+@import '../guide.less';
+
+@keyframes guide-move {
+  0%   {transform: translate(0px,0px);}
+}
+@keyframes guide-move-reverse {
+  100% {transform: translate(0px,0px);}
+}
+
+.ble(){
+  width: 199px;
+  height: 112px;
+  left: 301px;
+  top: 194px;
+  @media (max-width: @phone-max-width){
+    width: 130px;
+    height: 73px;
+    left: 227px;
+    top: 106px;
+  }
+}
+.power(){
+  width: 139px;
+  height: 139px;
+  left: 488px;
+  top: 181px;
+  @media (max-width: @phone-max-width){
+    width: 91px;
+    height: 91px;
+    left: 349px;
+    top: 97px;
+  }
+}
+.led(){
+  width: 152px;
+  height: 139px;
+  top: 181px;
+  left: 614px;
+  @media (max-width: @phone-max-width){
+    width: 99px;
+    height: 91px;
+    left: 431px;
+    top: 97px;
+  }
+}
+
+.guide-scene {
+  //
+  .scene-1-obj1-bg {
+    width: 660px;
+    height: 366px;
+    bottom: 42px;
+    left: 50%;
+    transform: translateX(-50%);
+    @media (max-width: @phone-max-width){
+      width: 370px;
+      height: 205px;
+      bottom: 24px;
+    }
+  }
+
+  //
+  .scene-2-obj1-ble {
+    .ble();
+    left: 227px;
+    top: 194px;
+    transform: translateX(74px);
+    animation: guide-move 1s infinite;
+    @media (max-width: @phone-max-width){
+      left: 179px;
+      top: 106px;
+      transform: translateX(48px);
+    }
+  }
+  .scene-2-obj2-power {
+    .power();
+  }
+  //
+  
+  @keyframes guide-poweron-power {
+    0%   {opacity: 1;}
+    75%  {opacity: 1;}
+    100% {opacity: 0;}
+  }
+  .scene-3-obj1-ble {
+    .ble();
+  }
+  .scene-3-obj2-power {
+    .power();
+  }
+  .scene-3-obj2-shadow-power {
+    .power();
+    animation: guide-poweron-power 1s infinite;
+  }
+  .scene-3-obj3-hand {
+    .guide-hand();
+    top: 264px;
+    left: 552px;
+    @media (max-width: @phone-max-width){
+      left: 390px;
+      top: 150px;
+    }
+  }
+
+  .scene-3-1-obj1-bg {
+    width: 422px;
+    height: 219px;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    @media (max-width: @phone-max-width){
+      width: 275px;
+      height: 142px;
+      bottom: 24px;
+    }
+  }
+
+  //
+  .scene-7-obj1-ble {
+    .ble();
+  }
+  .scene-7-obj2-led {
+    .led();
+    transform: translateX(74px);
+    animation: guide-move-reverse 1s infinite;
+    @media (max-width: @phone-max-width){
+      transform: translateX(48px);
+    }
+  }
+  .scene-7-obj3-power {
+    .power();
+  }
+
+}
+

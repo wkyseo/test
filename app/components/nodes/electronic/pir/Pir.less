@@ -1,0 +1,26 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-preview.node-type-PIR {
+  .node-preview-icon {
+    .node-preview-electronic-body-single-size(@node-pir);
+  }
+}
+
+.node-actual.node-type-PIR {
+  .node-body{
+    .node-electronic-body-single-size(@node-pir);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-pir;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core{
+      background-color: @node-pir;
+    }
+  }  
+}

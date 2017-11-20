@@ -1,0 +1,23 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+.node-actual.node-type-TOGGLE {
+  .node-body{
+    .node-common-round-body-icon-only(@node-timer,@node-timer-borderColor);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-toggle;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-toggle;
+    }
+  }
+  .node-port-outputs{
+    .core{
+      background-color: @node-toggle;
+    }
+  }
+}
+

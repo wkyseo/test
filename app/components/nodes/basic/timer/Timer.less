@@ -1,0 +1,24 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-actual.node-type-TIMER {
+  .node-body{
+    .node-common-round-body-label-content(@node-timer, @node-timer-borderColor);
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-timer;
+    }
+  }
+  .node-port-outputs{
+    .core{
+      background-color: @node-timer;
+    }
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-timer;
+    }
+  }
+}

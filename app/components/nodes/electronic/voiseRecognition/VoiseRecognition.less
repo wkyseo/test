@@ -1,0 +1,30 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-preview.node-type-VOISERECOGNITION {
+  .node-preview-icon {
+    .node-preview-electronic-body-double-size(@node-voiceRecognition);
+  }
+}
+
+.node-actual.node-type-VOISERECOGNITION {
+  .node-body{
+    .node-electronic-body-double-size(@node-voiceRecognition);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-voiceRecognition;
+    }
+  }
+  .node-port-outputs{
+    .core{
+      .node-output-port-stying-object-style(@node-voiceRecognition);
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-voiceRecognition;
+    }
+  }
+}

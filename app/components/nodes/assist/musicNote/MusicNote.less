@@ -1,0 +1,30 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-actual.node-type-MUSICNOTE {
+  .node-body {
+    .node-common-round-body-title-text(@node-sound-musicNote);
+  }
+  .node-port-input .core {
+    border-color: @node-sound-musicNote;
+  }
+
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-sound-musicNote;
+    }
+  }
+
+  .node-port-outputs{
+    .core{
+      .node-output-port-stying-object-style(@node-sound-musicNote);
+      &.show{
+        width: 16px;
+        height: 16px;
+        -webkit-border-radius: 100%;
+        border-radius: 100%;
+      }
+    }
+  }
+}

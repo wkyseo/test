@@ -1,0 +1,29 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-preview.node-type-ULTRASONIC {
+  .node-preview-icon {
+    .node-preview-electronic-body-double-size(@node-ultrasonic);
+  }
+}
+
+.node-actual.node-type-ULTRASONIC {
+  .node-body{
+    .node-electronic-body-double-size(@node-ultrasonic);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-ultrasonic;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core{
+      .node-output-port-number-style(@node-ultrasonic);
+    }
+    &.show{
+      margin-left: 0;
+    }
+  }
+}

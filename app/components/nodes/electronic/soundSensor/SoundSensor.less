@@ -1,0 +1,26 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-preview.node-type-SOUNDSENSOR {
+  .node-preview-icon {
+    .node-preview-electronic-body-single-size(@node-soundSensor);
+  }
+}
+
+.node-actual.node-type-SOUNDSENSOR {
+  .node-body{
+    .node-electronic-body-single-size(@node-soundSensor);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-soundSensor;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core {
+      .node-output-port-number-style(@node-soundSensor);
+    }
+  }
+}

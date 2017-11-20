@@ -1,0 +1,72 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-actual.node-type-SCALE {
+  .node-body{
+    .node-common-square-body(@node-scale,@node-scale-borderColor);
+    .node-actual-body {
+      .scale-title {
+        display: block;
+        font-size: 15px;
+        line-height: 20px;
+        color: #ffffff;
+        opacity: 0.8;
+        margin-bottom: 6px;
+      }
+      .scale-in, .scale-out {
+        font-size: 14px;
+        color: #ffffff;
+        line-height: 20px;
+        opacity: 0.94;
+        font-weight: bold;
+        .flex-lr-tb-center;
+        .show-number {
+          display: inline-block;
+          margin: 0 2px;
+          .single-line-ellipsis;
+        }
+      }
+      .scale-arrow {
+        width: auto;
+        height: 11px;
+        object-fit: contain;
+      }
+      @media (max-width: @phone-max-width) {
+        .scale-title {
+          font-size: 10px;
+          line-height: 13px;
+          margin-bottom: 4px;
+        }
+        .scale-in, .scale-out {
+          font-size: 10px;
+          line-height: 13px;
+        }
+        .scale-arrow {
+          height: 7px;
+        }
+      }
+    }
+
+  }
+ .node-config {
+    font-size: 14px;
+ }
+  .tab-control{
+    right: -42px;
+    .tab-control-circle{
+      background-color: @node-scale;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-scale;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core {
+      .node-output-port-number-style(@node-scale);
+    }
+  } 
+}

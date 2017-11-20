@@ -1,0 +1,35 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-actual.node-type-HOLD {
+  .node-body{
+    .node-common-round-body-text-icon(@node-hold,@node-hold-borderColor);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-hold;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-hold;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core {
+      .node-output-port-number-style(@node-hold);
+    }
+    .show{
+      margin-left: 0;
+    }
+  }    
+}
+
+@media (max-width: @phone-max-width) {
+  .node-actual.node-type-HOLD .node-body .hold {
+    font-size: 12px;
+  }
+}
+

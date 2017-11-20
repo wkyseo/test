@@ -1,0 +1,12 @@
+{
+    "locale": {
+        "ios": ["zh-Hans"],
+        "android": ["zh-rCN"]
+    },
+    "config_ios": {
+        "CFBundleDisplayName": "神经元"
+    },
+    "config_android": {
+        "app_name": "神经元"
+    }
+}

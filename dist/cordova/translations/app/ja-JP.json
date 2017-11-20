@@ -1,0 +1,12 @@
+{
+    "locale": {
+        "ios": ["ja-JP"],
+        "android": ["ja"]
+    },
+    "config_ios": {
+        "CFBundleDisplayName": "ニューロン"
+    },
+    "config_android": {
+        "app_name": "ニューロン"
+    }
+}

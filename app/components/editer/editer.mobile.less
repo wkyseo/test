@@ -1,0 +1,181 @@
+@import '../../constants/styleConsts';
+@tabMobileWidth: 12vw;
+@media (max-width: @phone-max-width) {
+  .editer-main{
+    height: 100vh;
+    width: 100vw;
+    .editer-palette{
+      height: auto;
+      .editer-palette-tab{
+        height: 23px;
+        .tabs{
+          box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1);
+          &.shrink-with-two-mounted-node{
+            width: calc(~"72vw + 2px") !important;
+          }
+          &.shrink-with-one-mounted-node{
+            width: calc(~"60vw + 2px") !important;
+          }
+          &.shrink-with-zero-mounted-node{
+            width: calc(~"48vw + 2px") !important;
+          }
+          .tab-name{
+            width: @tabMobileWidth;
+            height: 24px;
+            font-size: 9px;
+            .tab-separate{
+              height: 50%;
+            }
+          }
+          .active{
+            border-top-right-radius: 4px;
+            border-top-left-radius: 4px;
+          }
+        }
+        .tabs-control{
+          height: 40px;
+        }
+      }
+      .editer-palette-nodes{
+        height: 17.1vh;
+        padding: 0 1vw;
+        box-shadow: inset 0 2px 0 0 #cce3ef;
+      }
+      .palette-div-delete{
+        height: 17.1vh;
+      }
+    }
+
+    .back-to-entrance{
+      // left: 3.5vw;
+      // top: 4.2vh;
+      left: 15px;
+      top: 9px;
+    }
+
+    .editer-shelf{
+      width: 411px;
+      height: 63px;
+      font-size: 12px;
+      .shelf-div{
+        width: 100%;
+        height: 100%;
+        .show-hardware,.noConnection{
+          width: 100%;
+          height: 100%;
+          .connect-icon,.not-connected-icon{
+            height: 39px;
+            width: 62px;
+            .connected-hardware{
+              width: auto;
+              height: 33px;
+            }
+            .disconnected-hardware{
+              width: auto;
+              height: 30%;
+            }
+            .upload-hardware{
+              height: 30%;
+              width: auto;
+            }
+          }
+          .not-connected-text{
+            height: 63px;
+            width: 349px;
+            margin-left: 62px;
+            line-height: 63px;
+            font-size: 18px;
+          }
+          .shelf-nodes{
+            margin-left: 65px;
+            height: 100%;
+            .shelf-node{
+              height: 100%;
+              margin: 0 8px;
+              &:first-child{
+                margin-left: 16px;
+              }
+              .node-preview-shelf{
+                height: auto;
+                width: auto;
+              }
+              .update-mask{
+                height: 44px;
+                span {
+                  font-size: 7px;
+                }
+              }
+            }
+          }
+          .wifi-connected-div{
+            width: 85%;
+            height: 100%;
+            justify-content: space-around;
+            left: 15%;
+            .upload,.disconnect{
+              width: 36%;
+              height: 60%;
+              font-size: 12px;
+              padding: 0 20px;
+            }
+            .upload{
+              margin: 0;
+            }
+            .disconnect{
+              margin: 0;
+            }
+            .override{
+              font-size: 16px;
+              height: 60%;
+              width: 80px;
+            }
+            .overridetips{
+              font-size: 16px;
+            }
+            .cover-result-text{
+              font-size: 16px;
+            }
+            .running-text{
+              font-size: 16px;
+            }
+          }
+          &:before{
+            width: 71px;
+          }
+          &:after{
+            width: 20px;
+          }
+        }
+      }
+      .update-warning-div{
+        margin-top: 4px;
+        height: 20px;
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+
+    .editer-canvas{
+      .cloud-entrance {
+        right: 15px;
+        top: 9px;
+      }
+      .show-cloud-entrance{
+        right: 15px;
+        top: 9px;
+      }
+      .magnifier{
+        right: 15px;
+        top: 9px;
+        &.adjust-magnifer-position{
+          // top: calc(~"4.2vh + 45px");
+          top: 54px;
+        }
+      }
+      .editer-surface-canvas svg .deleteBtn {
+        -webkit-transform: translate(-22px, -22px) scale(0.625);
+        transform: translate(-22px, -22px) scale(0.625);
+      }
+    }
+  }
+}

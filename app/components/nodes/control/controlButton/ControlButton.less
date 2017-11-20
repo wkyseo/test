@@ -1,0 +1,56 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-preview.node-type-CONTROLBUTTON {
+
+}
+
+.node-actual.node-type-CONTROLBUTTON {
+  .node-body {
+    .node-common-square-body(@node-control,@node-control-borderColor);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    .editer-gear{
+      display: block;
+      width: 20px;
+      height: 20px;
+      float: right;
+    }
+    .node-actual-icon {
+      height: 58px;
+      width: 58px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      .center();
+    }
+  }
+  .node-port-outputs{
+    .core{
+      background-color: @node-control;
+      .round();
+    }
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-control;
+    }
+  }
+}
+
+@media (max-width: @phone-max-width) {
+  .node-actual.node-type-CONTROLBUTTON{
+    .node-body{
+      width: 60px;
+      height: 60px;
+      .node-actual-icon{
+        width: 60%;
+        height: 60%;
+      }
+      .editer-gear {
+        -webkit-transform: scale(0.625);
+        transform: scale(0.625);
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-actual.node-type-PLAYNOTES {
+  .node-body {
+    .node-common-round-body-title-text(@node-sound-playmusic);
+  }
+  .node-port-input .core {
+    border-color: @node-sound-playmusic;
+  }
+
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-sound-playmusic;
+    }
+  }
+
+  .node-port-outputs{
+    .core{
+      .node-output-port-stying-object-style(@node-sound-playmusic);
+    }
+  }
+}
+
+// @media (max-width: @phone-max-width) {
+//   .node-actual.node-type-PLAYNOTES{
+//     .node-body{
+//       .node-actual-body{
+//         font-size: 14px;
+//         .tune{
+//           font-size: 18px;
+//         }
+//       }
+//     }
+//     .node-port-outputs{
+//       .core{
+//         .node-port-value{
+//           width: 8px;
+//           height: 8px;
+//         }
+//       }
+//     }
+//   }
+// }

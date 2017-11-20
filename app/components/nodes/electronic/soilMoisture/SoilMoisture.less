@@ -1,0 +1,27 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-preview.node-type-SOIL_HUMIDITY {
+  .node-preview-icon {
+    .node-preview-electronic-body-single-size(@node-soilMoisture);
+  }
+}
+
+.node-actual.node-type-SOIL_HUMIDITY {
+  .node-body{
+    .node-electronic-body-single-size(@node-soilMoisture);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-soilMoisture;
+    }
+  }
+
+  .node-port-outputs{
+    margin-left: 10px;
+    .core{
+      .node-output-port-number-style(@node-soilMoisture);
+    }
+  }  
+}

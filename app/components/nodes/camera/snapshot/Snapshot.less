@@ -1,0 +1,22 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+.node-actual.node-type-SNAPSHOT {
+  .node-body {
+    .node-common-round-body-icon-only(@node-camera-snapShot);
+  }
+  .node-port-input .core {
+    border-color: @node-camera-snapShot;
+  }
+
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-camera-snapShot;
+    }
+  }
+
+  .node-port-outputs{
+    .core{
+      .node-output-port-stying-object-style(@node-camera-snapShot);
+    }
+  }
+}

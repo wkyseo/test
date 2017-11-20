@@ -1,0 +1,32 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-preview.node-type-LEDSTRIP {
+  .node-preview-icon {
+    .node-preview-electronic-body-single-size(@node-ledstrip);
+  }
+}
+
+.node-actual.node-type-LEDSTRIP {
+  .node-body{
+    .node-electronic-body-single-size(@node-ledstrip);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-ledstrip;
+    }
+  }
+  .node-config {
+    width: 200px;
+    height: 152px;
+    .title {
+      display: none;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-ledstrip;
+    }
+  }
+}

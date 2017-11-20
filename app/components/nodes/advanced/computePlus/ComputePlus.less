@@ -1,0 +1,36 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+.node-preview.node-type-COMPUTEPLUS {
+
+}
+
+.node-actual.node-type-COMPUTEPLUS {
+  .node-body{
+    .node-common-square-body-2-text-icon(@node-computePlus);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-computePlus;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-computePlus;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core {
+      .node-output-port-number-style(@node-computePlus);
+    }
+    .show{
+      margin-left: 0;
+      text-overflow: ellipsis;
+      overflow: hidden;  
+    }
+  }
+  .node-config {
+    font-size: 14px;
+  }
+}
+

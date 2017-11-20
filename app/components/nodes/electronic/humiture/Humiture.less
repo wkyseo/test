@@ -1,0 +1,27 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-preview.node-type-HUMITURE {
+  .node-preview-icon {
+    .node-preview-electronic-body-single-size(@node-humiture);
+  }
+}
+
+.node-actual.node-type-HUMITURE {
+  .node-body{
+    .node-electronic-body-single-size(@node-humiture);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-humiture;
+    }
+  }
+
+  .node-port-outputs{
+    margin-left: 10px;
+    .core{
+      .node-output-port-number-style(@node-humiture);
+    }
+  }  
+}

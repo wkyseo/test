@@ -1,0 +1,28 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-preview.node-type-LIGHTSENSOR {
+  .node-preview-icon {
+    .node-preview-electronic-body-single-size(@node-lightSensor);
+  }
+}
+
+.node-actual.node-type-LIGHTSENSOR {
+  .node-body{
+    .node-electronic-body-single-size(@node-lightSensor);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-lightSensor;
+    }
+  }
+
+  .node-port-outputs{
+    margin-left: 10px;
+    .core{
+      .node-output-port-number-style(@node-lightSensor);
+    }
+
+  }  
+}

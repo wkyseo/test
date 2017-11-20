@@ -1,0 +1,27 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+@import '../../../../constants/styleConsts';
+
+.node-preview.node-type-JOYSTICK {
+  .node-preview-icon {
+    .node-preview-electronic-body-single-size(@node-joyStick);
+  }
+}
+
+.node-actual.node-type-JOYSTICK {
+  .node-body{
+    .node-electronic-body-single-size(@node-joyStick);
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-joyStick;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core{
+      .node-output-port-number-style(@node-joyStick);
+    }
+
+  }  
+}
